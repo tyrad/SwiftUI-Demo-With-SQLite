@@ -22,7 +22,19 @@ struct BikingListView: View {
                     } else {
                         List {
                             ForEach(viewModel.allTask, id: \.id) { task in
-                                Text(task.name)
+                                NavigationLink {
+                                    BikingDetailView.init(viewModel: BikingDetailViewModel(id: task.id))
+                                } label: {
+                                    HStack.init {
+                                        Text(task.name)
+                                        if task.status {
+                                            Text("  \(Image(systemName: "flag.checkered.circle.fill"))")
+                                        }
+                                    }
+                                }
+                            }
+                            .onDelete { indexSet in
+                                viewModel.deleteTask(at: indexSet)
                             }
                         }
                         .listStyle(.plain)

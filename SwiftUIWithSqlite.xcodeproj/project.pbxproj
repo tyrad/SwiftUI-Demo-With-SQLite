@@ -19,6 +19,8 @@
 		5C2A6ABA2A67823E0023219E /* BikingInsertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AB92A67823E0023219E /* BikingInsertView.swift */; };
 		5C2A6AC52A678F940023219E /* BikingInsertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AC42A678F940023219E /* BikingInsertViewModel.swift */; };
 		5C2A6AC82A678FDE0023219E /* BikingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AC72A678FDE0023219E /* BikingDataStore.swift */; };
+		5C82AC0E2A67BDED0098EB4A /* BikingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82AC0D2A67BDED0098EB4A /* BikingDetailViewModel.swift */; };
+		5C82AC102A67BE710098EB4A /* BikingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82AC0F2A67BE710098EB4A /* BikingDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		5C2A6AB92A67823E0023219E /* BikingInsertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingInsertView.swift; sourceTree = "<group>"; };
 		5C2A6AC42A678F940023219E /* BikingInsertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingInsertViewModel.swift; sourceTree = "<group>"; };
 		5C2A6AC72A678FDE0023219E /* BikingDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingDataStore.swift; sourceTree = "<group>"; };
+		5C82AC0D2A67BDED0098EB4A /* BikingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingDetailViewModel.swift; sourceTree = "<group>"; };
+		5C82AC0F2A67BE710098EB4A /* BikingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 				5C2A6AB22A6777F00023219E /* BikingListView.swift */,
 				5C2A6AB42A677BA00023219E /* BikingStartButton.swift */,
 				5C2A6AB92A67823E0023219E /* BikingInsertView.swift */,
+				5C82AC0F2A67BE710098EB4A /* BikingDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			children = (
 				5C2A6AB02A6777C40023219E /* BikingListViewModel.swift */,
 				5C2A6AC42A678F940023219E /* BikingInsertViewModel.swift */,
+				5C82AC0D2A67BDED0098EB4A /* BikingDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C82AC102A67BE710098EB4A /* BikingDetailView.swift in Sources */,
 				5C2A6AB52A677BA00023219E /* BikingStartButton.swift in Sources */,
 				5C2A6AA12A6695A40023219E /* ContentView.swift in Sources */,
 				5C2A6AB12A6777C40023219E /* BikingListViewModel.swift in Sources */,
@@ -206,6 +213,7 @@
 				5C2A6AC82A678FDE0023219E /* BikingDataStore.swift in Sources */,
 				5C2A6AB32A6777F00023219E /* BikingListView.swift in Sources */,
 				5C2A6AAE2A6777430023219E /* Task.swift in Sources */,
+				5C82AC0E2A67BDED0098EB4A /* BikingDetailViewModel.swift in Sources */,
 				5C2A6A9F2A6695A40023219E /* SwiftUIWithSqliteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

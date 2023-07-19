@@ -9,9 +9,8 @@ import Foundation
 import SQLite
 
 class BikingDataStore {
-
     static let shared = BikingDataStore()
-    
+
     static let DIR_TASK_DB = "BikingDB"
     static let STORE_NAME = "biking.sqlite3"
 
@@ -20,7 +19,7 @@ class BikingDataStore {
     private let name = Expression<String>("name")
     private let date = Expression<Date>("date")
     private let status = Expression<Bool>("status")
-    private var db: Connection? = nil
+    private var db: Connection?
 
     private init() {
         if let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
@@ -58,25 +57,25 @@ class BikingDataStore {
             print(error)
         }
     }
-    
+
     // 新增
-    func insert(name:String ,date:Date) -> Int64? {
+    func insert(name: String, date: Date) -> Int64? {
         guard let database = db else { return nil }
         let insert = tasks.insert(self.name <- name,
                                   self.date <- date,
-                                  self.status <- false)
+                                  status <- false)
         do {
             let rowId = try database.run(insert)
             return rowId
-        }catch {
+        } catch {
             print(error)
             return nil
         }
     }
-    
+
     // 获取全部task
     func getAllTasks() -> [Task] {
-        var tasks:[Task] = []
+        var tasks: [Task] = []
         guard let database = db else {
             return []
         }
@@ -87,9 +86,65 @@ class BikingDataStore {
                                   date: task[date],
                                   status: task[status]))
             }
-        }catch {
+        } catch {
             print(error)
         }
         return tasks
+    }
+
+    // 查找
+    func findTask(taskId: Int64) -> Task? {
+        var task = Task(id: taskId, name: "", date: Date(), status: false)
+        guard let database = db else {
+            return nil
+        }
+        let filter = tasks.filter(id == taskId)
+        do {
+            for t in try database.prepare(filter) {
+                task.name = t[name]
+                task.date = t[date]
+                task.status = t[status]
+            }
+        } catch {
+            print(error)
+        }
+        return task
+    }
+
+    // 更新
+    func update(id: Int64, name: String, date: Date = Date(), status: Bool = false) -> Bool {
+        guard let database = db else {
+            return false
+        }
+
+        let task = tasks.filter(self.id == id)
+        do {
+            let update = task.update([
+                self.name <- name,
+                self.date <- date,
+                self.status <- status
+            ])
+            if try database.run(update) > 0 {
+                return true
+            }
+        } catch {
+            print(error)
+        }
+        return false
+    }
+    
+    // 删除
+    func delete(id: Int64) -> Bool {
+        guard let database = db else {
+            return false
+        }
+        do {
+            let filter = tasks.filter(self.id == id)
+            try database.run(filter.delete())
+            return true
+        } catch {
+            print(error)
+            return false
+        }
     }
 }

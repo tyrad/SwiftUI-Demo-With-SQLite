@@ -11,6 +11,14 @@
 		5C2A6AA12A6695A40023219E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AA02A6695A40023219E /* ContentView.swift */; };
 		5C2A6AA32A6695A60023219E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2A6AA22A6695A60023219E /* Assets.xcassets */; };
 		5C2A6AA62A6695A60023219E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2A6AA52A6695A60023219E /* Preview Assets.xcassets */; };
+		5C2A6AAE2A6777430023219E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AAD2A6777430023219E /* Task.swift */; };
+		5C2A6AB12A6777C40023219E /* BikingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AB02A6777C40023219E /* BikingListViewModel.swift */; };
+		5C2A6AB32A6777F00023219E /* BikingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AB22A6777F00023219E /* BikingListView.swift */; };
+		5C2A6AB52A677BA00023219E /* BikingStartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AB42A677BA00023219E /* BikingStartButton.swift */; };
+		5C2A6AB82A6781AB0023219E /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 5C2A6AB72A6781AB0023219E /* SQLite */; };
+		5C2A6ABA2A67823E0023219E /* BikingInsertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AB92A67823E0023219E /* BikingInsertView.swift */; };
+		5C2A6AC52A678F940023219E /* BikingInsertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AC42A678F940023219E /* BikingInsertViewModel.swift */; };
+		5C2A6AC82A678FDE0023219E /* BikingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6AC72A678FDE0023219E /* BikingDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,13 @@
 		5C2A6AA02A6695A40023219E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5C2A6AA22A6695A60023219E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2A6AA52A6695A60023219E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5C2A6AAD2A6777430023219E /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		5C2A6AB02A6777C40023219E /* BikingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingListViewModel.swift; sourceTree = "<group>"; };
+		5C2A6AB22A6777F00023219E /* BikingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingListView.swift; sourceTree = "<group>"; };
+		5C2A6AB42A677BA00023219E /* BikingStartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingStartButton.swift; sourceTree = "<group>"; };
+		5C2A6AB92A67823E0023219E /* BikingInsertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingInsertView.swift; sourceTree = "<group>"; };
+		5C2A6AC42A678F940023219E /* BikingInsertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingInsertViewModel.swift; sourceTree = "<group>"; };
+		5C2A6AC72A678FDE0023219E /* BikingDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikingDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2A6AB82A6781AB0023219E /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +67,10 @@
 		5C2A6A9D2A6695A40023219E /* SwiftUIWithSqlite */ = {
 			isa = PBXGroup;
 			children = (
+				5C2A6AC62A678FD50023219E /* Store */,
+				5C82AC0C2A67BC4B0098EB4A /* ViewModel */,
+				5C2A6AAF2A6777BD0023219E /* View */,
+				5C2A6AAC2A669AD60023219E /* Model */,
 				5C2A6A9E2A6695A40023219E /* SwiftUIWithSqliteApp.swift */,
 				5C2A6AA02A6695A40023219E /* ContentView.swift */,
 				5C2A6AA22A6695A60023219E /* Assets.xcassets */,
@@ -65,6 +85,41 @@
 				5C2A6AA52A6695A60023219E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5C2A6AAC2A669AD60023219E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C2A6AAD2A6777430023219E /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C2A6AAF2A6777BD0023219E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C2A6AB22A6777F00023219E /* BikingListView.swift */,
+				5C2A6AB42A677BA00023219E /* BikingStartButton.swift */,
+				5C2A6AB92A67823E0023219E /* BikingInsertView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5C2A6AC62A678FD50023219E /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				5C2A6AC72A678FDE0023219E /* BikingDataStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		5C82AC0C2A67BC4B0098EB4A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5C2A6AB02A6777C40023219E /* BikingListViewModel.swift */,
+				5C2A6AC42A678F940023219E /* BikingInsertViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +138,9 @@
 			dependencies = (
 			);
 			name = SwiftUIWithSqlite;
+			packageProductDependencies = (
+				5C2A6AB72A6781AB0023219E /* SQLite */,
+			);
 			productName = SwiftUIWithSqlite;
 			productReference = 5C2A6A9B2A6695A40023219E /* SwiftUIWithSqlite.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 5C2A6A922A6695A40023219E;
+			packageReferences = (
+				5C2A6AB62A6781AB0023219E /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 5C2A6A9C2A6695A40023219E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +198,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2A6AB52A677BA00023219E /* BikingStartButton.swift in Sources */,
 				5C2A6AA12A6695A40023219E /* ContentView.swift in Sources */,
+				5C2A6AB12A6777C40023219E /* BikingListViewModel.swift in Sources */,
+				5C2A6ABA2A67823E0023219E /* BikingInsertView.swift in Sources */,
+				5C2A6AC52A678F940023219E /* BikingInsertViewModel.swift in Sources */,
+				5C2A6AC82A678FDE0023219E /* BikingDataStore.swift in Sources */,
+				5C2A6AB32A6777F00023219E /* BikingListView.swift in Sources */,
+				5C2A6AAE2A6777430023219E /* Task.swift in Sources */,
 				5C2A6A9F2A6695A40023219E /* SwiftUIWithSqliteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,9 +332,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIWithSqlite/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -279,8 +348,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mistj..SwiftUIWithSqlite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mistj.SwiftUIWithSqlite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -292,9 +362,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIWithSqlite/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -307,8 +378,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mistj..SwiftUIWithSqlite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mistj.SwiftUIWithSqlite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -337,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C2A6AB62A6781AB0023219E /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C2A6AB72A6781AB0023219E /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C2A6AB62A6781AB0023219E /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C2A6A932A6695A40023219E /* Project object */;
 }
